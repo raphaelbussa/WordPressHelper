@@ -8,8 +8,8 @@ android {
     defaultConfig {
         minSdkVersion 8
         targetSdkVersion 21
-        versionCode 1
-        versionName "0.0.1"
+        versionCode 3
+        versionName "1.0.0"
     }
     buildTypes {
         release {
@@ -28,5 +28,5 @@ publish {
     userOrg = 'raphaelbussa'
     groupId = 'rebus'
     artifactId = 'wordpress-helper'
-    version = '0.0.1'
+    version = '1.0.0'
 }

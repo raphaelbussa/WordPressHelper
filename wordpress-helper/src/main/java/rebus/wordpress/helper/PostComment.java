@@ -8,9 +8,6 @@ import org.jsoup.Jsoup;
 
 import java.io.IOException;
 
-/**
- * Created by Raphael on 11/02/2015.
- */
 public class PostComment extends AsyncTask {
 
     private String URL_WORDPRESS;
