@@ -1,11 +1,12 @@
 package rebus.wordpress.helper;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
  * Created by Raphael on 11/02/2015.
  */
-public class FeedItem {
+public class FeedItem implements Serializable {
 
     private String title;
     private String pubDate;

@@ -1,9 +1,11 @@
 package rebus.wordpress.helper;
 
+import java.io.Serializable;
+
 /**
  * Created by Raphael on 11/02/2015.
  */
-public class CommentItem {
+public class CommentItem implements Serializable {
 
     private String creator;
     private String pubDate;
