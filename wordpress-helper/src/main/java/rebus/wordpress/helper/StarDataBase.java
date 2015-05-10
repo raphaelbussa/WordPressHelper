@@ -169,7 +169,7 @@ public class StarDataBase extends SQLiteOpenHelper {
     private String setCategoty(ArrayList<String> category) {
         String cat = "";
         for (int i = 0; i < category.size(); i++) {
-            cat += category.get(i);
+            cat += category.get(i) + ",";
         }
         return cat;
     }

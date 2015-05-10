@@ -19,6 +19,7 @@ public class SearchParser extends AsyncTask {
 
     private String URL_WORDPRESS;
     private String searchTerm;
+    private String searchClear;
     private ProgressDialog progressDialog;
     private String progressDialogTitle;
     private String progressDialogMessage;
@@ -57,7 +58,7 @@ public class SearchParser extends AsyncTask {
     @Override
     protected Object doInBackground(Object[] params) {
         try {
-            Document document = Jsoup.connect(URL_WORDPRESS + "/?s=" + searchTerm.replaceAll("[^a-zA-Z ]", "").replaceAll(" ", "+") + "&feed=rss2")
+            Document document = Jsoup.connect(URL_WORDPRESS + "/?s=" + searchClear + "&feed=rss2")
                     .userAgent("Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.22 (KHTML, like Gecko) Chrome/25.0.1364.172 Safari/537.22")
                     .timeout(60000).ignoreContentType(true).get();
             Elements elements = document.getElementsByTag("item");
@@ -80,10 +81,6 @@ public class SearchParser extends AsyncTask {
                 Elements elements1 = document1.select("img");
                 feedItem.setImage(elements1.attr("src"));
 
-                //get id
-                String idPost[] = element.getElementsByTag("guid").first().text().split("p=");
-                feedItem.setId(idPost[1]);
-
                 //get all category
                 Elements elements2 = element.getElementsByTag("category");
                 ArrayList<String> category = new ArrayList<>();
@@ -92,8 +89,13 @@ public class SearchParser extends AsyncTask {
                 }
                 feedItem.setCategory(category);
 
-                //add feeditem to arraylist
-                feedItems.add(feedItem);
+                //get id
+                String idPost[] = element.getElementsByTag("guid").first().text().split("p=");
+                if (idPost.length  > 1) {
+                    feedItem.setId(idPost[1]);
+                    //add feeditem to arraylist
+                    feedItems.add(feedItem);
+                }
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -112,6 +114,7 @@ public class SearchParser extends AsyncTask {
             progressDialog.show();
         }
         feedItems = new ArrayList<>();
+        searchClear = searchTerm.replace("[^a-zA-Z ]", "").replace(" ", "+");
     }
 
     @Override

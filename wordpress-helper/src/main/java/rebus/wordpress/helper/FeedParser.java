@@ -78,10 +78,6 @@ public class FeedParser extends AsyncTask {
                 Elements elements1 = document1.select("img");
                 feedItem.setImage(elements1.attr("src"));
 
-                //get id
-                String idPost[] = element.getElementsByTag("guid").first().text().split("p=");
-                feedItem.setId(idPost[1]);
-
                 //get all category
                 Elements elements2 = element.getElementsByTag("category");
                 ArrayList<String> category = new ArrayList<>();
@@ -90,8 +86,14 @@ public class FeedParser extends AsyncTask {
                 }
                 feedItem.setCategory(category);
 
-                //add feeditem to arraylist
-                feedItems.add(feedItem);
+                //get id
+                String idPost[] = element.getElementsByTag("guid").first().text().split("p=");
+                if (idPost.length > 1) {
+                    feedItem.setId(idPost[1]);
+                    //add feeditem to arraylist
+                    feedItems.add(feedItem);
+                }
+
             }
         } catch (IOException e) {
             e.printStackTrace();

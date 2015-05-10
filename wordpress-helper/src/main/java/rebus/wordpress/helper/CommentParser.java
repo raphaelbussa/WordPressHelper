@@ -67,8 +67,11 @@ public class CommentParser extends AsyncTask {
                 commentItem.setLink(element.select("link").first().nextSibling().toString().trim());
                 commentItem.setGuid(element.getElementsByTag("guid").first().text());
                 String idPost[] = element.getElementsByTag("guid").first().text().split("#comment-");
-                commentItem.setId(idPost[1]);
-                commentItems.add(commentItem);
+                if (idPost.length  > 1) {
+                    commentItem.setId(idPost[1]);
+                    //add feeditem to arraylist
+                    commentItems.add(commentItem);
+                }
             }
         } catch (IOException e) {
             e.printStackTrace();
