@@ -157,6 +157,7 @@ protected void onPause() {
 }
 ```
 ### Changelog
+- 1.0.8 fix category/tag bug 
 - 1.0.7 fix bintray maven upload 
 - 1.0.6 bug fix
 - 1.0.5 bug fix
