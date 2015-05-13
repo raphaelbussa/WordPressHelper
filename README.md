@@ -172,7 +172,7 @@ If you use this lib [contact me](mailto:raphaelbussa@gmail.com?subject=WordPress
 - [Mister Gadget Beta](https://play.google.com/store/apps/details?id=rebus.mister.gadget)
 
 ###Developed By
-Raphael Bussa - [raphaelbussa@gmail.com](mailto:raphaelbussa@gmail.com)
+Raphaël Bussa - [raphaelbussa@gmail.com](mailto:raphaelbussa@gmail.com)
 
 [ ![Twitter](https://raw.githubusercontent.com/rebus007/WordPressHelper/master/img/social/twitter-icon.png) ](https://twitter.com/rebus_007)[ ![Google Plus](https://raw.githubusercontent.com/rebus007/WordPressHelper/master/img/social/google-plus-icon.png) ](https://plus.google.com/+RaphaelBussa/posts)[ ![Linkedin](https://raw.githubusercontent.com/rebus007/WordPressHelper/master/img/social/linkedin-icon.png) ](https://www.linkedin.com/in/rebus007)
 
