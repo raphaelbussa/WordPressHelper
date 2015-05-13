@@ -11,7 +11,7 @@ repositories {
 ```
 ```Gradle
 dependencies {
-    compile 'rebus:wordpress-helper:1.0.6'
+    compile 'rebus:wordpress-helper:1.0.7'
 }
 ```
 ### How to use
@@ -157,6 +157,7 @@ protected void onPause() {
 }
 ```
 ### Changelog
+- 1.0.7 fix bintray maven upload 
 - 1.0.6 bug fix
 - 1.0.5 bug fix
 - 1.0.4 bug fix
