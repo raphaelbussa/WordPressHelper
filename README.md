@@ -1,4 +1,4 @@
-# WordPressHelper
+# WordPressHelper [ ![Download](https://api.bintray.com/packages/raphaelbussa/maven/wordpress-helper/images/download.svg) ](https://bintray.com/raphaelbussa/maven/wordpress-helper/_latestVersion)
 This library is created for get post and information from a blog or a website created with WordPress
 ### Import
 At the moment the library is in my personal maven repo
@@ -170,6 +170,11 @@ protected void onPause() {
 ### App using WordPress Helper
 If you use this lib [contact me](mailto:raphaelbussa@gmail.com?subject=WordPress Helper) and I will add it to the list below:
 - [Mister Gadget Beta](https://play.google.com/store/apps/details?id=rebus.mister.gadget)
+
+###Developed By
+Raphael Bussa - [raphaelbussa@gmail.com](mailto:raphaelbussa@gmail.com)
+
+[ ![Twitter](https://raw.githubusercontent.com/rebus007/WordPressHelper/master/img/social/twitter-icon.png) ](https://twitter.com/rebus_007)[ ![Google Plus](https://raw.githubusercontent.com/rebus007/WordPressHelper/master/img/social/google-plus-icon.png) ](https://plus.google.com/+RaphaelBussa/posts)[ ![Linkedin](https://raw.githubusercontent.com/rebus007/WordPressHelper/master/img/social/linkedin-icon.png) ](https://www.linkedin.com/in/rebus007)
 
 ### License
 ```
