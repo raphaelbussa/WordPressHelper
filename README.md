@@ -156,6 +156,16 @@ protected void onPause() {
     feedParser.onPauseLoading();
 }
 ```
+### Changelog
+- 1.0.6 bug fix
+- 1.0.5 bug fix
+- 1.0.4 bug fix
+- 1.0.3 bug fix
+- 1.0.2 bug fix
+- 1.0.1 bug fix
+- 1.0.0 add StarDatabase
+- 0.0.1 first alpha
+
 ### App using WordPress Helper
 If you use this lib [contact me](mailto:raphaelbussa@gmail.com?subject=WordPress Helper) and I will add it to the list below:
 - [Mister Gadget Beta](https://play.google.com/store/apps/details?id=rebus.mister.gadget)
