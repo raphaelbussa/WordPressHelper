@@ -11,7 +11,7 @@ repositories {
 ```
 ```Gradle
 dependencies {
-    compile 'rebus:wordpress-helper:1.0.7'
+    compile 'rebus:wordpress-helper:1.0.8'
 }
 ```
 ### How to use
