@@ -157,7 +157,7 @@ protected void onPause() {
 }
 ```
 ### App using WordPress Helper
-If you use this lib contact me and I will add it to the list below:
+If you use this lib [contact me](mailto:raphaelbussa@gmail.com?subject=WordPress Helper) and I will add it to the list below:
 - [Mister Gadget Beta](https://play.google.com/store/apps/details?id=rebus.mister.gadget)
 
 ### License
