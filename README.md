@@ -1,4 +1,6 @@
-# WordPressHelper [ ![Download](https://api.bintray.com/packages/raphaelbussa/maven/wordpress-helper/images/download.svg) ](https://bintray.com/raphaelbussa/maven/wordpress-helper/_latestVersion)
+# WordPressHelper
+[![License](https://img.shields.io/badge/License-MIT-blue.svg?style=flat)](http://opensource.org/licenses/MIT) [ ![Download](https://api.bintray.com/packages/raphaelbussa/maven/wordpress-helper/images/download.svg) ](https://bintray.com/raphaelbussa/maven/wordpress-helper/_latestVersion) [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-WordPressHelper-brightgreen.svg?style=flat)](http://android-arsenal.com/details/1/1816)
+
 This library is created for get post and information from a blog or a website created with WordPress
 ### Import
 At the moment the library is in my personal maven repo
