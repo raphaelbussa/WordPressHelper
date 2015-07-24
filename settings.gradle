@@ -1,1 +1,1 @@
-include ':app', ':wordpress-helper'
+include ':wordpress-helper'

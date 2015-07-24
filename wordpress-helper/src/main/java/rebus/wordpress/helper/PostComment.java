@@ -27,8 +27,11 @@ package rebus.wordpress.helper;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.AsyncTask;
+import android.util.Log;
 
+import org.jsoup.Connection;
 import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
 
 import java.io.IOException;
 
@@ -48,7 +51,7 @@ public class PostComment extends AsyncTask {
     private Context context;
     private OnComplete onComplete;
     private Boolean showDialog = false;
-    private Boolean error = false;
+    private int response;
 
     public PostComment(String id, String URL_WORDPRESS, String name, String email, String url, String comment, String commentParent) {
         this.id = id;
@@ -84,18 +87,18 @@ public class PostComment extends AsyncTask {
 
     @Override
     protected Object doInBackground(Object[] params) {
+        Connection connection  = Jsoup.connect(URL_WORDPRESS + "/wp-comments-post.php");
+        connection.method(Connection.Method.POST);
+        connection.data("author", name);
+        connection.data("email", email);
+        connection.data("url", url);
+        connection.data("comment", comment);
+        connection.data("comment_post_ID", id);
+        connection.data("comment_parent", commentParent);
         try {
-            Jsoup.connect(URL_WORDPRESS + "/wp-comments-post.php")
-                    .data("author", name)
-                    .data("email", email)
-                    .data("url", url)
-                    .data("comment", comment)
-                    .data("comment_post_ID", id)
-                    .data("comment_parent", commentParent)
-                    .post();
+            response = connection.execute().statusCode();
         } catch (IOException e) {
             e.printStackTrace();
-            error = true;
         }
         return null;
     }
@@ -120,7 +123,7 @@ public class PostComment extends AsyncTask {
                 progressDialog.dismiss();
             }
         }
-        if (error) {
+        if (response != 200) {
             onComplete.onError();
         } else {
             onComplete.onFinish();
